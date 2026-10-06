@@ -1,0 +1,28 @@
+<!doctype html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no'><meta name='theme-color' content='#09090c'><title>Picture Abhi Baaki Hai</title><link rel='stylesheet' href='styles.css'></head><body>
+<div id='app'>
+<section id='splash' class='screen active'><div class='grain'></div><div class='clapper'>🎬</div><div class='eyebrow'>AN ACTOR'S JOURNEY</div><h1>PICTURE<br><span>ABHI BAAKI HAI</span></h1><p>Your story starts before the cameras roll.</p><button id='begin'>BEGIN</button></section>
+<section id='game' class='screen'>
+<header><div><div class='chapter'>CHAPTER 1 · SYDNEY</div><strong>THE BUILD</strong></div><div class='day'>DAY <b id='day'>1</b></div></header>
+<div class='resources'><div>⏱ <b id='time'>12</b><small>TIME</small></div><div>⚡ <b id='energy'>10</b><small>ENERGY</small></div><div>💵 <b id='money'>$600</b><small>MONEY</small></div></div>
+<main id='main'>
+<section id='home' class='tab active'>
+<div class='scene stage0' id='scene'><div class='window'><span>SYDNEY</span></div><div class='poster'>AUDITION<br><small>DREAM BIG</small></div><div class='selftape'><div class='phone'>▯</div><small>PHONE + BOOKS</small></div><div class='avatar'><div class='hair'></div><div class='head'><i></i></div><div class='neck'></div><div class='body'><span>TEE</span></div><div class='legs'></div></div><div class='scene-label'><b id='physiqueName'>STARTING</b><span id='roomName'>Basic self-tape corner</span></div></div>
+<div class='mission'><span>NEXT MILESTONE</span><b>Build an actor worth taking to India.</b><div class='bar'><i id='readinessBar'></i></div><small><em id='ready'>3</em>% INDIA READY</small></div>
+<div class='actions'>
+<button data-action='gym'><i>🏋️</i><b>Gym</b><small>2 time · 2 energy</small></button>
+<button data-action='acting'><i>🎭</i><b>Acting Training</b><small>3 time · 2 energy · $80</small></button>
+<button data-action='selftape'><i>🎥</i><b>Self-Tape</b><small>2 time · 2 energy</small></button>
+<button data-action='dance'><i>💃</i><b>Dance Class</b><small>2 time · 2 energy · $35</small></button>
+<button data-action='karate'><i>🥋</i><b>GKR Karate</b><small>2 time · 2 energy</small></button>
+<button data-action='hindi'><i>🗣️</i><b>Hindi</b><small>1 time · 1 energy</small></button>
+<button data-action='work'><i>💼</i><b>Contract Work</b><small>4 time · 3 energy · +$300</small></button>
+<button data-action='groom'><i>✂️</i><b>Groom & Style</b><small>1 time · $50</small></button>
+</div><button id='endDay' class='endday'>END DAY →</button>
+</section>
+<section id='profile' class='tab'><h2>ACTOR PROFILE</h2><p class='sub'>Build proof, not just potential.</p><div id='stats' class='stats'></div><h3>PORTFOLIO</h3><div id='portfolio' class='portfolio'></div></section>
+<section id='skills' class='tab'><h2>TRAINING</h2><p class='sub'>The skills you take with you.</p><div id='skillList'></div></section>
+<section id='india' class='tab'><div class='indiaHero'>🇮🇳<h2>INDIA READY?</h2><p>You choose when to go. Mumbai won't wait for you to feel ready.</p><div class='ring'><b id='indiaPct'>3%</b><span>READY</span></div></div><div id='indiaChecks' class='checks'></div><button class='locked' id='moveIndia'>MOVE TO INDIA</button><small class='hint'>Available at any readiness level after Day 30. Preparation changes your starting opportunities.</small></section>
+</main>
+<nav><button class='selected' data-tab='home'>⌂<span>HOME</span></button><button data-tab='profile'>🎬<span>ACTOR</span></button><button data-tab='skills'>✦<span>SKILLS</span></button><button data-tab='india'>✈<span>INDIA</span></button></nav>
+<div id='toast'></div><div id='levelup' class='modal'><div><small>PROGRESS</small><h2 id='levelTitle'>You changed.</h2><p id='levelText'></p><button id='closeModal'>CONTINUE</button></div></div>
+</section></div><script src='app.js'></script></body></html>
