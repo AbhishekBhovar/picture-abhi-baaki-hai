@@ -1,24 +1,54 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no"><meta name="apple-mobile-web-app-capable" content="yes"><title>Picture Abhi Baaki Hai</title><link rel="stylesheet" href="styles.css"></head><body>
-<section id="splash" class="screen active"><div class="clapper">🎬</div><div class="eyebrow">AN ACTOR'S JOURNEY</div><h1>PICTURE<br><span>ABHI BAAKI HAI</span></h1><p>Your story starts before the cameras roll.</p><button id="begin">BEGIN IN SYDNEY</button></section>
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no"><meta name="apple-mobile-web-app-capable" content="yes"><title>Picture Abhi Baaki Hai</title><link rel="stylesheet" href="styles.css"></head><body>
+<section id="splash" class="screen active"><div class="clapper">🎬</div><div class="eyebrow">AN ACTOR'S JOURNEY</div><h1>PICTURE<br><span>ABHI BAAKI HAI</span></h1><p>Your story starts before the cameras roll.</p><button id="begin">CONTINUE YOUR STORY</button></section>
+
 <main id="game" class="screen">
-<section id="home" class="view active"><div class="homeArt"><img src="assets/home-approved.png" alt="Picture Abhi Baaki Hai home"><button class="hot gymHot" data-go="gym" aria-label="Gym"></button><button class="hot developHot" data-go="develop" aria-label="Develop"></button></div></section>
+  <section id="home" class="view active">
+    <div class="homeHero">
+      <img src="assets/home-approved.png" alt="Your Sydney starting point">
+      <div class="homeShade"></div>
+      <div class="homeTop">
+        <div><small>SYDNEY · DAY <b data-day>1</b></small><h1>BUILD YOURSELF</h1></div>
+        <div class="miniHud"><span>⏱ <b data-time>12</b></span><span>⚡ <b data-energy>10</b></span><span>💰 <b data-money>$600</b></span></div>
+      </div>
+    </div>
 
-<section id="gym" class="view"><header class="top"><button class="back" data-go="home">‹</button><div><small>SYDNEY · STAGE 1</small><h2>GYM</h2></div><div class="day">DAY <b data-day>1</b></div></header><div class="hud"><div>⏱ <b data-time>12</b><small>HOURS</small></div><div>⚡ <b data-energy>10</b><small>ENERGY</small></div><div>💰 <b data-money>$600</b><small>FUNDS</small></div></div><div class="gymHero"><img src="assets/gym.webp" alt="Gym"><div class="shade"></div><div class="heroCopy"><small>STAGE 1 · BUILD YOURSELF</small><h1>BUILD THE BODY<br>THAT BUILDS CONFIDENCE.</h1><p>Complete the workout. Today’s full session earns Fitness, Discipline and Confidence XP.</p></div></div><div class="workout"><div class="workHead"><div><small>WORKOUT A</small><h3>FULL BODY FOUNDATION</h3></div><b id="setCount">0/12 SETS</b></div><div id="exerciseList"></div><button id="finishWorkout" class="primary locked">FINISH WORKOUT · +10 CONFIDENCE</button><p class="note">Starting the first set commits <b>2 hours</b> and <b>2 energy</b>. The workout can only be completed once per day.</p></div></section>
+    <div class="homePanel">
+      <div class="stageLabel"><span>STAGE 1 · CURRENT</span><b id="homeStagePct">0%</b></div>
+      <h2>Become confident enough to begin acting training.</h2>
+      <div class="confidenceLine"><div><b id="homeConfidence">0</b><span>/ 100 CONFIDENCE</span></div><div class="bar"><i id="homeConfidenceBar"></i></div></div>
 
-<section id="develop" class="view"><header class="top"><button class="back" data-go="home">‹</button><div><small>YOUR ROADMAP</small><h2>JOURNEY</h2></div><div class="day">DAY <b data-day>1</b></div></header><div class="hud"><div>⏱ <b data-time>12</b><small>HOURS</small></div><div>⚡ <b data-energy>10</b><small>ENERGY</small></div><div>💰 <b data-money>$600</b><small>FUNDS</small></div></div>
-<div class="journey">
-  <div class="stageHero"><small id="stageKicker">STAGE 1 · ACTIVE</small><h1 id="stageTitle">BUILD YOURSELF</h1><p id="stageCopy">Before the camera, build the confidence to walk into the room.</p><div class="confidence"><div class="confidenceTop"><span>CONFIDENCE XP</span><b><em id="confidenceNow">0</em> / <span id="confidenceTarget">100</span></b></div><div class="confidenceBar"><i id="confidenceBar"></i></div><small id="unlockCopy">Next unlock: Acting Training at 100 Confidence</small></div></div>
+      <div class="unlockCard"><div class="lockIcon">🔒</div><div><small>NEXT UNLOCK</small><b>Acting Training</b><p id="unlockRequirement">Build your foundations first.</p></div></div>
 
-  <div class="nextMission"><small>RECOMMENDED NEXT</small><div><span id="nextIcon">🏋️</span><div><b id="nextTitle">Gym Workout</b><p id="nextText">Start by proving to yourself that Day 1 is real.</p></div></div><button id="nextAction" class="primary">GO TO GYM</button></div>
+      <div class="nextMove"><small>YOUR NEXT MOVE</small><div class="nextMoveRow"><span id="homeNextIcon">🏋️</span><div><b id="homeNextTitle">Go to the Gym</b><p id="homeNextText">Start proving to yourself that this journey is real.</p></div></div><button id="homeNextAction" class="primary">CONTINUE STORY →</button></div>
 
-  <div class="sectionHead"><small>STAGE 1 ACTIVITIES</small><span>Earn Confidence to progress</span></div>
-  <div id="foundationActions" class="foundationActions"></div>
+      <div class="foundationStrip" id="homeFoundations"></div>
+      <button id="endDayHome" class="secondary">END DAY · REST & RESET</button>
+    </div>
 
-  <div class="sectionHead"><small>THE ACTOR JOURNEY</small><span>Your sequence</span></div>
-  <div id="stagePath" class="stagePath"></div>
+    <nav class="bottomNav"><button class="active" data-go="home">⌂<span>HOME</span></button><button data-go="journey">◈<span>JOURNEY</span></button><button data-go="you">◎<span>YOU</span></button></nav>
+  </section>
 
-  <div class="statsHead"><small>YOUR ATTRIBUTES</small></div><div id="stats"></div>
-  <button id="endDay" class="secondary">END DAY · REST & RESET</button>
-</div></section>
+  <section id="activity" class="view">
+    <header class="top"><button class="back" data-go="home">‹</button><div><small id="activityKicker">STAGE 1</small><h2 id="activityTitle">GYM</h2></div><div class="day">DAY <b data-day>1</b></div></header>
+    <div class="hud"><div>⏱ <b data-time>12</b><small>HOURS</small></div><div>⚡ <b data-energy>10</b><small>ENERGY</small></div><div>💰 <b data-money>$600</b><small>FUNDS</small></div></div>
+    <div class="eventHero"><img id="activityImage" src="assets/gym.webp" alt=""><div class="eventShade"></div><div class="eventCopy"><small id="eventSmall">TODAY'S DECISION</small><h1 id="eventHeading">SHOW UP.</h1><p id="eventStory"></p></div></div>
+    <div class="choices"><div class="choiceIntro"><small>CHOOSE YOUR MOVE</small><p>There isn't a perfect choice. Your decisions shape your time, energy, money and confidence.</p></div><div id="choiceList"></div></div>
+  </section>
 
-</main><div id="toast"></div><div id="modal" class="modal"><div><small id="modalKicker">MILESTONE</small><h2 id="modalTitle"></h2><p id="modalText"></p><button id="modalClose" class="primary">CONTINUE</button></div></div><script src="app.js"></script></body></html>
+  <section id="journey" class="view"><header class="top"><button class="back" data-go="home">‹</button><div><small>THE ROAD AHEAD</small><h2>JOURNEY</h2></div><div class="day">DAY <b data-day>1</b></div></header><div class="journeyWrap">
+    <div class="journeyHero"><small>YOUR STORY</small><h1>SYDNEY → MUMBAI</h1><p>Every stage exists for a reason. Complete what this version of you needs before the next part of the actor journey opens.</p></div>
+    <div id="stagePath" class="stagePath"></div>
+  </div><nav class="bottomNav"><button data-go="home">⌂<span>HOME</span></button><button class="active" data-go="journey">◈<span>JOURNEY</span></button><button data-go="you">◎<span>YOU</span></button></nav></section>
+
+  <section id="you" class="view"><header class="top"><button class="back" data-go="home">‹</button><div><small>YOUR CHARACTER</small><h2>YOU</h2></div><div class="day">DAY <b data-day>1</b></div></header><div class="youWrap">
+    <div class="youCard"><small>CURRENT ARC</small><h1 id="youArc">BUILD YOURSELF</h1><p>Your stats aren't a scorecard. They're the things that change what opportunities you can handle next.</p></div>
+    <div class="bigStat"><span>CONFIDENCE</span><b id="youConfidence">0</b><small>THE KEY THAT OPENS THE NEXT DOOR</small><div class="bar"><i id="youConfidenceBar"></i></div></div>
+    <div id="stats" class="statsGrid"></div>
+    <div class="foundationGoals"><small>STAGE 1 FOUNDATIONS</small><div id="foundationGoals"></div></div>
+  </div><nav class="bottomNav"><button data-go="home">⌂<span>HOME</span></button><button data-go="journey">◈<span>JOURNEY</span></button><button class="active" data-go="you">◎<span>YOU</span></button></nav></section>
+</main>
+
+<div id="toast"></div>
+<div id="modal" class="modal"><div><small id="modalKicker">RESULT</small><h2 id="modalTitle"></h2><p id="modalText"></p><button id="modalClose" class="primary">BACK HOME</button></div></div>
+<script src="app.js"></script></body></html>

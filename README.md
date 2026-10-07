@@ -1,20 +1,19 @@
-# PICTURE ABHI BAAKI HAI
-A cinematic 2D mobile-first actor journey game.
+# PICTURE ABHI BAAKI HAI — Story Loop Build
 
-## Current prototype
-- Chapter 1: Sydney preparation
-- Daily Time / Energy / Money economy
-- Acting, fitness, self-tape, Hindi, GKR karate, grooming/style
-- Separate dance progression: Indian Classical, Garba, Bhangra, Salsa, Bachata, Swing
-- Visible five-stage physique progression
-- Actor portfolio unlocks and showreel progression
-- India Readiness dashboard
-- Day 30 Mumbai decision gate
-- Local save using localStorage
-- iPhone-friendly layout and double-tap zoom prevention
+This build replaces the tracker-style Gym flow with a life-sim / actor-journey progression loop.
 
-## Run
-Open `index.html` directly or serve the folder with any static web server.
+## Core structure
+- HOME: current stage, Confidence, next unlock, recommended next move
+- JOURNEY: the complete Sydney → Mumbai progression sequence
+- YOU: attributes and Stage 1 foundations
 
-## Next production pass
-Replace the CSS prototype avatar/room with locked illustrated character sprites and layered Sydney environment artwork while preserving the gameplay state model.
+## Stage 1 — Build Yourself
+Complete foundation goals while earning 100 Confidence:
+- Gym: 3 sessions
+- Nutrition: 5 aligned decisions
+- Style & Grooming: 2 actions
+- Recovery & Movement: 3 actions
+
+Each activity is now a decision scene, not a tracker. Choices affect time, energy, money, confidence and attributes.
+
+Existing local save data is reused where possible.
