@@ -1,19 +1,9 @@
-# PICTURE ABHI BAAKI HAI — Story Loop Build
+# PABH v04 — Evolution Build
 
-This build replaces the tracker-style Gym flow with a life-sim / actor-journey progression loop.
-
-## Core structure
-- HOME: current stage, Confidence, next unlock, recommended next move
-- JOURNEY: the complete Sydney → Mumbai progression sequence
-- YOU: attributes and Stage 1 foundations
-
-## Stage 1 — Build Yourself
-Complete foundation goals while earning 100 Confidence:
-- Gym: 3 sessions
-- Nutrition: 5 aligned decisions
-- Style & Grooming: 2 actions
-- Recovery & Movement: 3 actions
-
-Each activity is now a decision scene, not a tracker. Choices affect time, energy, money, confidence and attributes.
-
-Existing local save data is reused where possible.
+Core changes:
+- Home stripped back to one recommended move + subtle alternatives.
+- No tracker-style workout page; Stage 1 activities remain decision events.
+- Career systems reveal progressively rather than appearing on Day 1.
+- New first major branch: Find Your Edge (Craft / Action / Creator / Industry).
+- Later systems (India strategy, brand deals, rumours/PR) stay hidden until career thresholds.
+- Existing save data is preserved through the same localStorage key.
